@@ -5,11 +5,13 @@ spring:
 server:
   port: 9000
 
+#Eureka server
 eureka:
   server:
-    maxThreadsForPeerReplication: 0
+    eviction-interval-timer-in-ms: 1000
   instance:
     hostname: entry-eureka-server.kz
+    preferIpAddress: true
   client:
     register-with-eureka: false
     fetch-registry: false
